@@ -17,7 +17,7 @@ if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
 fi
 
 # set interactive environmental-valiables
-PS1='$ '
+shopt -s expand_aliases
 source ~/.bashrc
 . /vagrant/build-functions.sh
 
