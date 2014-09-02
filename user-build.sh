@@ -16,6 +16,8 @@ if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
 
+# set interactive environmental-valiables
+PS1='$ '
 source ~/.bashrc
 . /vagrant/build-functions.sh
 
