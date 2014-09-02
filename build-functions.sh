@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function old_ruby_install_with_bundler() {
-    readonly ruby_version=$1
+    ruby_version=$1
     rbenv install $ruby_version
     rbenv global $ruby_version
     gem install rubygems-update
@@ -9,20 +9,20 @@ function old_ruby_install_with_bundler() {
 }
 
 function ruby_install_with_bundler() {
-    readonly ruby_version=$1
+    ruby_version=$1
     rbenv install $ruby_version
     rbenv global $ruby_version
     gem install bundler
 }
 
 function bundle_install() {
-    readonly ruby_version=$1
+    ruby_version=$1
     rbenv local $ruby_version
     rbenv install --path vendor/bundle
 }
 
 function install_rake_compiler_cross_ruby() {
-    readonly ruby_version=$1
+    ruby_version=$1
     rbenv local $ruby_version
     bundle exec rake-compiler cross-ruby HOST=i686-w64-mingw32 VERSION=$ruby_version
     bundle exec rake-compiler cross-ruby HOST=x86_64-w64-mingw32 VERSION=$ruby_version
