@@ -20,5 +20,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
-  config.vm.provision(:shell, :path => "cross-build-rroonga.sh")
+  config.vm.provision :shell, path: "cross-build-rroonga.sh", privileged: false
 end

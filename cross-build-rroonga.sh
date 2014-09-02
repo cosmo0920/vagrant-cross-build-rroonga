@@ -1,7 +1,8 @@
 #!/bin/bash
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update
-apt-get -y install git build-essential ruby mingw-w64
+sudo apt-get update
+sudo apt-get -y install libssl-dev libreadline-dev
+sudo apt-get -y install git build-essential ruby mingw-w64
 
-su -c "/vagrant/user-build.sh" vagrant
+/vagrant/user-build.sh
