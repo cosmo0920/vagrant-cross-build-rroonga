@@ -9,11 +9,11 @@ $ vagrant up
 
 Then, cross compiling....
 
+Cross compiled gems and built gem are copied under pkgs:
+
 ```bash
 $ ls pkgs/
 ```
-
-Cross compiled gems and built gem are copied under pkgs:
 
 ```log
 pkgs/rroonga-4.0.5-x86-mingw32.gem
