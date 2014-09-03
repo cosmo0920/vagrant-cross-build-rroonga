@@ -4,7 +4,7 @@ function old_ruby_install_with_bundler() {
     ruby_version=$1
     rbenv install $ruby_version
     rbenv global $ruby_version
-    gem install rubygems-update
+    gem update --system
     gem install bundler
 }
 
