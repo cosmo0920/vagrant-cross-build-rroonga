@@ -1,4 +1,4 @@
-Vagrant box for Cross compiling Rrronga
+Vagrant box for Cross compiling Rroonga
 ===
 
 Vagrant box for cross compiling Rroonga.
