@@ -13,7 +13,7 @@ Then, cross compiling....
 $ ls pkgs/
 ```
 
-Cross compiled gems and built gem are opied under pkgs:
+Cross compiled gems and built gem are copied under pkgs:
 
 ```log
 pkgs/rroonga-4.0.5-x86-mingw32.gem
