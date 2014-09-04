@@ -34,7 +34,7 @@ function cross_compile() {
     bundle exec rake build
     bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET MAKE_N_JOBS=$CPU_NUMS cross clean native gem
     bundle exec rake clean:groonga
-    bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET RROONGA_USE_GROONGA_X64=true MAKE_N_JOBS=$CPU_NUMS clean native gem
+    bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET MAKE_N_JOBS=$CPU_NUMS RROONGA_USE_GROONGA_X64=true cross clean native gem
 }
 
 function cp_pkg_gems() {
