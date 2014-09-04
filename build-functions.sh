@@ -33,8 +33,6 @@ function cross_compile() {
     rbenv local $RUBY19
     bundle exec rake build
     bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET MAKE_N_JOBS=$CPU_NUMS cross clean native gem
-    bundle exec rake configure # to execute `make clean`
-    make clean
     bundle exec rake clean:groonga
     bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET RROONGA_USE_GROONGA_X64=true MAKE_N_JOBS=$CPU_NUMS clean native gem
 }
