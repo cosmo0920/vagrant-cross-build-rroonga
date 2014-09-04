@@ -19,6 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     if File.exist?(proc_file)
       cpu_nums = `cat #{proc_file} |grep processor|wc -l`
       use_cpus = cpu_nums.to_i / 2 if cpu_nums.to_i >=2
+    elsif RUBY_PLATFORM =~ /darwin/
+      cpu_nums = `sysctl -n hw.ncpu`
+      use_cpus = cpu_nums.to_i / 2 if cpu_nums.to_i >=2
     end
     vb.customize ["modifyvm", :id, "--cpus", "#{use_cpus.to_s}"]
     vb.customize ["modifyvm", :id, "--memory", "2048"]
