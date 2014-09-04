@@ -6,6 +6,9 @@ readonly RUBY21="2.1.2"
 readonly CROSS_TERGET="1.9.3:2.0.0:2.1.2"
 readonly PKG_GEMS="/vagrant/pkgs"
 
+cpu_nums = `cat /proc/cpuinfo |grep processor|wc -l`
+readonly CPU_NUMS=cpu_nums
+
 if [ ! -d ~/.rbenv ]; then
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
