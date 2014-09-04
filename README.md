@@ -16,8 +16,7 @@ $ ls pkgs/
 ```
 
 ```log
-pkgs/rroonga-4.0.5-x86-mingw32.gem
-pkgs/rroonga-4.0.5-x64-mingw32.gem
-pkgs/rroonga-4.0.5.gem
-...
+rroonga-4.0.5-x64-mingw32.gem
+rroonga-4.0.5-x86-mingw32.gem
+rroonga-4.0.5.gem
 ```
