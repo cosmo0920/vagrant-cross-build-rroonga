@@ -15,11 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider("virtualbox") do |vb|
     vb.gui = false
     proc_file = "/proc/cpuinfo"
+    use_cpus = 1
     if File.exist?(proc_file)
       cpu_nums = `cat #{proc_file} |grep processor|wc -l`
       use_cpus = cpu_nums.to_i / 2 if cpu_nums.to_i >=2
-    else
-      use_cpus = 2
     end
     vb.customize ["modifyvm", :id, "--cpus", "#{use_cpus.to_s}"]
     vb.customize ["modifyvm", :id, "--memory", "2048"]
