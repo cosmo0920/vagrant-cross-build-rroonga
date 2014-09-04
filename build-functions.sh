@@ -29,12 +29,11 @@ function install_rake_compiler_cross_ruby() {
 }
 
 function cross_compile() {
-    bundle exec rake configure # to execute `make clean`
-    make clean
     bundle exec rake clean:groonga
     rbenv local $RUBY19
     bundle exec rake build
     bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET cross clean native gem
+    bundle exec rake configure # to execute `make clean`
     make clean
     bundle exec rake clean:groonga
     bundle exec rake RUBY_CC_VERSION=$CROSS_TERGET RROONGA_USE_GROONGA_X64=true clean native gem
